@@ -2,7 +2,8 @@
 import java.util.Arrays;
 
 /**
- * Created by Administrator on 2018/10/2.
+ * 同L15题
+ * @see L15_3Sum.Solution#threeSum(int[])
  */
 public class L16_3Sum_Closest {
     public static void main(String[] args) {

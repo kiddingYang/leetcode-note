@@ -2,6 +2,7 @@ import common.ListNode;
 
 /**
  * Created by Administrator on 2018/10/3.
+ * 结题思路: 翻转链表存储,在比较翻转链表和原来链表每个节点的值
  */
 public class L234_Palindrome_Linked_List {
 

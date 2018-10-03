@@ -1,5 +1,6 @@
 /**
  * Created by Administrator on 2018/10/3.
+ * 转为char[] 从左右同时遍历,如果左右不相同,则不为回文数
  */
 public class L9_Palindrome_Number {
 
