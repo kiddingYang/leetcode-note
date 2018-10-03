@@ -8,25 +8,26 @@ public class L9_Palindrome_Number {
         System.out.println(palindrome);
     }
 
-}
+    static class Solution {
 
-class Solution {
-
-    public boolean isPalindrome(int x) {
-        if (x < 0) {
-            return false;
-        }
-        String XString = String.valueOf(x);
-        char[] chars = XString.toCharArray();
-        int left = 0;
-        int right = chars.length - 1;
-        while (left <= right) {
-            if (chars[left] != chars[right]) {
+        public boolean isPalindrome(int x) {
+            if (x < 0) {
                 return false;
             }
-            left++;
-            right--;
+            String XString = String.valueOf(x);
+            char[] chars = XString.toCharArray();
+            int left = 0;
+            int right = chars.length - 1;
+            while (left <= right) {
+                if (chars[left] != chars[right]) {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+            return true;
         }
-        return true;
     }
 }
+
+
