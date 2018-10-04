@@ -34,6 +34,7 @@ public class L142_Linked_List_Cycle_II {
             }
 
             // 查找循环链表头节点 推导参考 https://www.jianshu.com/p/ce7f035daf74
+            // 注意slow和fast起点不一致所以查找循环链表的头节点和参考有所差异
             slow = head;
             fast = fast.next;
             while (fast != slow) {
