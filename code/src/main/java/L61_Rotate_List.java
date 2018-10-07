@@ -15,7 +15,7 @@ public class L61_Rotate_List {
         l2.next = l3;
         l3.next = l4;
         l4.next = l5;
-        ListNode listNode = new Solution().rotateRight(l1, 2);
+        ListNode listNode = new Solution().rotateRight2(l1, 2);
         System.out.println(listNode);
     }
 
@@ -58,6 +58,32 @@ public class L61_Rotate_List {
                 p = p.next;
             }
             return head;
+        }
+
+
+        /**
+         * 先转为一个环形链表,在移动len-K次,断开后就是需要链表
+         */
+        public ListNode rotateRight2(ListNode head, int k) {
+            if (head == null || head.next == null) {
+                return head;
+            }
+            ListNode tail = head;
+            ListNode pre = head;
+            int len = 1;
+            while (tail.next != null) {
+                tail = tail.next;
+                len++;
+            }
+            // 组成环形链表
+            tail.next = pre;
+            k = k % len;
+            for (int i = 0; i < len - k; i++) {
+                pre = pre.next;
+                tail = tail.next;
+            }
+            tail.next = null;
+            return pre;
         }
     }
 }
