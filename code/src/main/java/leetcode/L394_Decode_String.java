@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.Stack;
 
 public class L394_Decode_String {

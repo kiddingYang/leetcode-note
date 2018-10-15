@@ -1,3 +1,5 @@
+package leetcode;
+
 import common.TreeNode;
 
 import java.util.ArrayList;
@@ -6,12 +8,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2018/10/14.
  */
-public class L144_Binary_Tree_Preorder_Traversal {
-
-
-    public static void main(String[] args) {
-
-    }
+public class L145_Binary_Tree_Postorder_Traversal {
 
 
     static class Solution {
@@ -19,24 +16,19 @@ public class L144_Binary_Tree_Preorder_Traversal {
         private List<Integer> vals = new ArrayList<>();
 
         /**
-         * 递归实现
+         * 递归算法
          */
-        public List<Integer> preorderTraversal(TreeNode root) {
+        public List<Integer> postorderTraversal(TreeNode root) {
 
             if (root == null) {
                 return vals;
             }
-            vals.add(root.val);
             TreeNode left = root.left;
-            if (left != null) {
-                preorderTraversal(left);
-            }
+            postorderTraversal(left);
             TreeNode right = root.right;
-            if (right != null) {
-                preorderTraversal(right);
-            }
+            postorderTraversal(right);
+            vals.add(root.val);
             return vals;
         }
     }
-
 }

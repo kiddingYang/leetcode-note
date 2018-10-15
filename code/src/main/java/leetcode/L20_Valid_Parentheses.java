@@ -1,3 +1,5 @@
+package leetcode;
+
 import java.util.Stack;
 
 public class L20_Valid_Parentheses {
