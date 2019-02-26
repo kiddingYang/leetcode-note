@@ -6,12 +6,12 @@ package geekbang;
 public class L23 {
 
     public static void main(String[] args) {
-        TreeNode ta = new TreeNode("a");
-        TreeNode tb = new TreeNode("b");
-        TreeNode tc = new TreeNode("c");
-        TreeNode td = new TreeNode("d");
-        TreeNode te = new TreeNode("e");
-        TreeNode tf = new TreeNode("f");
+        TreeNode ta = new TreeNode(1);
+        TreeNode tb = new TreeNode(2);
+        TreeNode tc = new TreeNode(3);
+        TreeNode td = new TreeNode(4);
+        TreeNode te = new TreeNode(5);
+        TreeNode tf = new TreeNode(6);
 
         ta.left = tb;
         tb.right = tc;
@@ -75,9 +75,18 @@ class TreeNode {
 
     TreeNode right;
 
-    Object data;
+    Integer data;
 
-    public TreeNode(Object data) {
+    public TreeNode(Integer data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "left=" + left +
+                ", right=" + right +
+                ", data=" + data +
+                '}';
     }
 }
